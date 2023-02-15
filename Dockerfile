@@ -1,10 +1,10 @@
 # syntax=docker/dockerfile:1
    
-FROM node:18
-WORKDIR /three-js-example
+FROM node
+WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm run build
-CMD ["npm", "run", "preview"]
 
-EXPOSE 3000
+CMD ["npm", "run", "preview"]
+EXPOSE 5173
